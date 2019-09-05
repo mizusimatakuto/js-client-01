@@ -1,25 +1,24 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>サンプルアプリケーション</title>
-</head>
-<body>
-    <h1>置換マシン</h1>
-    <div>
-        <!-- textarea -->
-        <textarea cols="60" rows="5" id="tarea">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</textarea>
-    </div>
-
-    <!-- input -->
-    <input type="text" id="input1">
-    <input type="text" id="input2">
-
-    <!-- button -->
-    <button id="btn">置換</button>
-
-    <!-- p -->
-    <p id="result">結果表示</p>
-    <script src="index.js"></script>
-</body>
+    <head>
+        <title>旅行先きめてくれるやつ</title>
+    </head>
+    <body>
+        <input id="ryokou_btn" type="button" value="ボタン">
+        <script>
+            document.getElementById( "ryokou_btn" ).onclick = function() {
+                var rnd = Math.floor( Math.random()*9 );
+                var ryokou;
+                if (rnd === 0) ryokou = "北海道";
+                if (rnd === 1) ryokou = "東北";
+                if (rnd === 2) ryokou = "中部";
+                if (rnd === 3) ryokou = "関東";
+                if (rnd === 4) ryokou = "近畿";
+                if (rnd === 5) ryokou = "中国";
+                if (rnd === 6) ryokou = "四国";
+                if (rnd === 7) ryokou = "九州";
+                if (rnd === 8) ryokou = "沖縄";
+                alert(ryokou);
+            }
+        </script>
+    </body>
 </html>
